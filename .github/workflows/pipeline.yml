@@ -6,8 +6,8 @@ on:
       - master
       - ResolveBugs
   pull_request:
-    branches:
-      - master
+      branches:
+        - master
 
 jobs:
   build:
@@ -32,7 +32,11 @@ jobs:
 
     # Step 4: Run tests
     - name: Run Python tests
+
       run: python -m unittest Test.py
+
+      run: python -m unittest Test.py
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
